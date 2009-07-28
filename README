@@ -1,0 +1,53 @@
+fwpwn: FireWire pwn tool
+Copyright (c) 2009 iZsh - izsh at iphone-dev.com
+
+=====================
+ License Information
+=====================
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+=============
+ Description
+=============
+
+fwpwn is a FireWire toolkit to pwn a computer through FireWire
+
+===============
+ Installation
+===============
+
+You'll need rubyfw available from rubygems:
+sudo gem install rubyfw
+
+Or if you want the latest release from github use the following:
+gem sources -a http://gems.github.com
+sudo gem install iZsh-rubyfw
+
+=======
+ Usage
+=======
+
+To use it just run fwpwn.rb
+the -h/--help option is available for each subcommands
+
+Here is an overview of the available commands:
+
+General commands:
+memdump          dump the memory of the FireWire device to a file.
+list             list the available devices.
+fwosdetect       Attempt to detect the OS.
+macosx           MacOSX subset
+
+MacOSX commands:
+macloginpwd      Mac OS X loginwindow.app password finder
