@@ -65,9 +65,11 @@ module FWOSDetect
 
     def osdetect(device)
       puts "Using device #{device}"
-      blocksize = 1024*1024*1 # Reading the first 1M should be enough
-      puts "-> reading 1M at 0x0 ..."
-      ret = device.read(0x0, blocksize)
+      # it seems we can't read below 1M on some arch (iMac at least so far)
+      # so we'll try to work around this limitation for now.
+      blocksize = 1024*1024*15
+      puts "-> reading 15M at 0x00100000 ..."
+      ret = device.read(0x00100000, blocksize)
       unless ret[:resultcode] == 0
         raise "\nError code #{ret[:resultcode]} while reading " +
           "0x#{blocksize.to_s(16)} bytes at 0x0"
@@ -78,6 +80,15 @@ module FWOSDetect
     end
     
     def macosx(device, buffer)
+      version = buffer[/Darwin Kernel Version[^\000]+/, 0]
+      return unless version
+      puts "MacOSX detected:"
+      puts " " * 4 + version
+    end
+
+    # FIXME: it doesn't seem to be possible against iMac because we can't read
+    # address 0x0, but let's keep the code around...
+    def macosx_hagfish(device, buffer)
       # hagfish marker should be at #0x5000
       return false unless buffer[0x5000..0x5006] == "Hagfish"
       puts "MacOSX detected..."

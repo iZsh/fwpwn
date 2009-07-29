@@ -1,3 +1,8 @@
+2009-07-29 from iZsh
+	general/fwosdetect.rb: Disable the Hagfish-based macos detection because
+	of some FireWire mystery against iMac and use a less elegant approach
+	(just string search) for now.
+
 2009-07-29 from iZsh:
 	cmdparser/memaddroptions.rb: Fix epic copy/paste fail in endaddr and
 	blocksize assignments. Handle octal, hexadecimal... representation.
