@@ -20,7 +20,7 @@
 #
 # A set of tools to pwn a computer through FireWire
 
-require 'cmdparser'
+require 'cmdparser/cmdparser'
 require 'general/fwlist'
 require 'general/fwosdetect'
 require 'general/fwmemdump'

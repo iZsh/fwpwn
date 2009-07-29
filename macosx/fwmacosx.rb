@@ -18,7 +18,7 @@
 # =============
 # Command subset for MacOSX
 require 'rubygems'
-require 'cmdparser'
+require 'cmdparser/cmdparser'
 require 'macosx/fwmacloginpwd'
 
 module FWMacOSX

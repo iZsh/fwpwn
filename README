@@ -46,8 +46,8 @@ Here is an overview of the available commands:
 General commands:
 memdump          dump the memory of the FireWire device to a file.
 list             list the available devices.
-fwosdetect       Attempt to detect the OS.
 macosx           MacOSX subset
+osdetect         Attempt to detect the OS.
 
 MacOSX commands:
 macloginpwd      Mac OS X loginwindow.app password finder

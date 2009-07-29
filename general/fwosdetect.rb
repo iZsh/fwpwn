@@ -18,12 +18,12 @@
 # =============
 # Attempt to detect the OS.
 require 'rubygems'
-require 'general/fwselectoptions'
+require 'cmdparser/fwselectoptions'
 require 'fw'
 
 module FWOSDetect
 
-  COMMAND = "fwosdetect"
+  COMMAND = "osdetect"
   HELP = "Attempt to detect the OS."
 
   def self.parse(args)

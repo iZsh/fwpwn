@@ -24,8 +24,8 @@ require 'optparse'
 require 'ostruct'
 require 'fw'
 
-require 'general/fwselectoptions'
-require 'general/memaddroptions'
+require 'cmdparser/fwselectoptions'
+require 'cmdparser/memaddroptions'
 
 module FWMacLoginPwd
   
