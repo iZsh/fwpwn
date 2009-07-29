@@ -33,20 +33,20 @@ module MemaddrOptions
       options.endaddr =   0x80000000
       options.blocksize = 1024*1024*4
       # optionts
-      opts.define("-b", "--begin-addr", Integer,
+      opts.define("-b", "--begin-addr", OptionParser::OctalInteger,
           ("Address to start the dump from " +
           "(default: 0x#{options.beginaddr.to_s(16)})"), :REQUIRED) do |addr|
         options.beginaddr = addr
       end
-      opts.define("-e", "--end-addr", Integer,
+      opts.define("-e", "--end-addr", OptionParser::OctalInteger,
           ("Address to end the dump to " +
           "(default: 0x#{options.endaddr.to_s(16)})"), :REQUIRED) do |addr|
-        options.beginaddr = addr
+        options.endaddr = addr
       end
-      opts.define("-B", "--blocksize", Integer,
+      opts.define("-B", "--blocksize", OptionParser::OctalInteger,
           ("Blocksize to use while reading" +
           "(default: 0x#{options.blocksize.to_s(16)})"), :REQUIRED) do |addr|
-        options.beginaddr = addr
+        options.blocksize = addr
       end
     end
 

@@ -1,4 +1,8 @@
 2009-07-29 from iZsh:
+	cmdparser/memaddroptions.rb: Fix epic copy/paste fail in endaddr and
+	blocksize assignments. Handle octal, hexadecimal... representation.
+
+2009-07-29 from iZsh:
 	cmdparser.rb: Move to cmdparser/cmdparser.rb.
 	general/fwselectoptions.rb: Move to cmdparser/fwselectoptions.rb.
 	general/memaddroptions.rb: Move to cmdparser/memaddroptions.rb.
